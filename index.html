@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de CPF</title>
+    <link rel="stylesheet" href="site.css">
+    <script defer src="validation.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Validador de CPF/CNPJ</h1>
+        <div id="content">
+        <form>
+            <label for="firstField">Tipo de dado que deseja validar: 
+                <select name="mode" id="mode">
+                        <option value="CPF">CPF</option>
+                        <option value="CNPJ">CNPJ</option>
+                </select>
+            </label>
+
+            <label for="selectedType">
+                Digite o seu <span class="SelectedMode">
+                    dado
+                </span> :
+                <input type="text" id="data" autocomplete="off">
+            </label>
+        </form>
+        <button id="validation">Validar</button>
+        </div>
+
+        <div id="result">
+            <h1>
+                Seu <span class="SelectedMode">
+                    dado
+                </span> é: <span id="finalResult">
+                    válido
+                </span>
+            </h1>
+            <h3><span class="givenData">138.701.547-80</span></h3>
+
+            <h2>Parâmetros: </h2>
+            <ul>
+                <li>Excesso de números repetidos: <span id="sequencia"></span></li>
+                <li>Quantidade de caracteres: <span id="lengthResult"></span></li>
+                <li>Penúltimo dígito: <span id="firstD"></span></li>
+                <li>Último dígito: <span id="secondD"></span></li>
+                <li>Você provavelmente nasceu em: <span id="estado"></span></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
